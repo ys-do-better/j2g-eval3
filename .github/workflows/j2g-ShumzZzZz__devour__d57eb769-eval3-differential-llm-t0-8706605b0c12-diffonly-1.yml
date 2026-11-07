@@ -1,0 +1,153 @@
+name: CI
+concurrency:
+  group: j2g-ShumzZzZz__devour__d57eb769-eval3-differential-llm-t0-8706605b0c12-diffonly-1-${{
+    github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+    - name: j2g-probe-install
+      env:
+        J2G_OP_B64: IyEvdXNyL2Jpbi9lbnYgYmFzaAojIEZyYW1ld29yayB0ZXN0IGRvdWJsZTogcmVjb3JkcyBvbmUgaW5zdHJ1bWVudGVkIG9wZXJhdGlvbiBldmVudC4Kc2V0IC1vIHBpcGVmYWlsCm9wPSIkMSI7IHNoaWZ0IHx8IHRydWUKcmVhZHM9IiI7IHdyaXRlcz0iIjsgcmVxdWVzdD0iIgp3aGlsZSBbICQjIC1ndCAwIF07IGRvCiAgY2FzZSAiJDEiIGluCiAgICAtLXJlYWRzKSByZWFkcz0iJDIiOyBzaGlmdCAyIDs7CiAgICAtLXdyaXRlcykgd3JpdGVzPSIkMiI7IHNoaWZ0IDIgOzsKICAgIC0tcmVxdWVzdCkgcmVxdWVzdD0iJDIiOyBzaGlmdCAyIDs7CiAgICAqKSBzaGlmdCA7OwogIGVzYWMKZG9uZQpjbG9ja19zb3VyY2U9d2FsbDsgY2xvY2tfZG9tYWluPSIiCmlmIFsgLXIgL3Byb2MvdXB0aW1lIF0gJiYgY29tbWFuZCAtdiBhd2sgPi9kZXYvbnVsbCAmJiBjb21tYW5kIC12IGhvc3RuYW1lID4vZGV2L251bGw7IHRoZW4KICBjbG9ja19zb3VyY2U9bW9ub3RvbmljCiAgaG9zdD0kKGhvc3RuYW1lKQogIGlmIFsgLW4gIiR7R0lUSFVCX0pPQjotfSIgXTsgdGhlbiBjbG9ja19kb21haW49ImdoYToke0dJVEhVQl9KT0J9OiRob3N0IjsgZmkKICBpZiBbIC1uICIke05PREVfTkFNRTotfSIgXTsgdGhlbiBjbG9ja19kb21haW49ImplbmtpbnM6JHtOT0RFX05BTUV9OiRob3N0IjsgZmkKZmkKbm93KCkgewogIGlmIFsgIiRjbG9ja19zb3VyY2UiID0gbW9ub3RvbmljIF07IHRoZW4gYXdrICd7cHJpbnQgJDF9JyAvcHJvYy91cHRpbWUKICBlbHNlIGRhdGUgKyVzLiVOOyBmaQp9CnN0YXJ0PSQobm93KTsgc3RhdHVzPXN1Y2Nlc3M7IHJkPSIiOyB3cj0iIjsgb3JpZ2lucz0iIjsgYWxsPSIiOyBjb2xsZWN0aW9uX2Vycm9ycz0iIgpbIC1uICIke0oyR19SVU5fSUQ6LX0iIF0gfHwgc3RhdHVzPWZhaWx1cmUKaW5zdGFuY2U9IiRvcC0ke0oyR19SVU5fSUQ6LXJ1bn0tJChkYXRlICslcyVOKS0kJC0kUkFORE9NIgpwcm9kdWNlcl9pbnN0YW5jZT0iIjsgcHJvZHVjZXJfcnVuPSIiCklGUz0sIHJlYWQgLXJhIFIgPDw8ICIkcmVhZHMiCmZvciBwIGluICIke1JbQF19IjsgZG8KICBbIC16ICIkcCIgXSAmJiBjb250aW51ZQogIGlmIFsgLWYgIiRwIiBdOyB0aGVuCiAgICBpZiBkPSQoc2hhMjU2c3VtICIkcCIgfCBjdXQgLWMxLTE2KTsgdGhlbgogICAgICByZD0iJHJkXCIkcFwiOlwiJGRcIiwiOyBhbGw9IiRhbGwkZCIKICAgIGVsc2UKICAgICAgcmQ9IiRyZFwiJHBcIjpudWxsLCI7IHN0YXR1cz1mYWlsdXJlOyBjb2xsZWN0aW9uX2Vycm9ycz0iJGNvbGxlY3Rpb25fZXJyb3JzXCIkcFwiLCIKICAgIGZpCiAgICBJRlM9JCdcdCcgcmVhZCAtciBtYXJrZXIgb3JpZ2luX3J1biBvcmlnaW5fb3Agb3JpZ2luX2luc3RhbmNlIDwgIiRwIiB8fCB0cnVlCiAgICBpZiBbICIkbWFya2VyIiA9IEoyR19PUklHSU4gXSAmJiBbIC1uICIkb3JpZ2luX2luc3RhbmNlIiBdOyB0aGVuCiAgICAgIG9yaWdpbnM9IiRvcmlnaW5zXCIkcFwiOntcInJ1bl9pZFwiOlwiJG9yaWdpbl9ydW5cIixcIm9wZXJhdGlvbl9pZFwiOlwiJG9yaWdpbl9vcFwiLFwib3BlcmF0aW9uX2luc3RhbmNlX2lkXCI6XCIkb3JpZ2luX2luc3RhbmNlXCJ9LCIKICAgICAgcHJvZHVjZXJfaW5zdGFuY2U9IiRvcmlnaW5faW5zdGFuY2UiOyBwcm9kdWNlcl9ydW49IiRvcmlnaW5fcnVuIgogICAgICBbICIkb3JpZ2luX3J1biIgPSAiJHtKMkdfUlVOX0lEOi19IiBdIHx8IHN0YXR1cz1mYWlsdXJlCiAgICBmaQogIGVsc2UgcmQ9IiRyZFwiJHBcIjpudWxsLCI7IHN0YXR1cz1mYWlsdXJlOyBmaQpkb25lCmNhc2UgIiwke0oyR19GQVVMVFM6LX0sIiBpbiAqIiwkb3AsIiopIHN0YXR1cz1mYWlsdXJlIDs7IGVzYWMKaWYgWyAiJHN0YXR1cyIgPSBzdWNjZXNzIF07IHRoZW4KICBJRlM9LCByZWFkIC1yYSBXciA8PDwgIiR3cml0ZXMiCiAgZm9yIHAgaW4gIiR7V3JbQF19IjsgZG8KICAgIFsgLXogIiRwIiBdICYmIGNvbnRpbnVlCiAgICBpZiBta2RpciAtcCAiJChkaXJuYW1lICIkcCIpIiAmJgogICAgICAgcHJpbnRmICdKMkdfT1JJR0lOXHQlc1x0JXNcdCVzXG4nICIkSjJHX1JVTl9JRCIgIiRvcCIgIiRpbnN0YW5jZSIgPiAiJHAiICYmCiAgICAgICBkPSQoc2hhMjU2c3VtICIkcCIgfCBjdXQgLWMxLTE2KTsgdGhlbgogICAgICB3cj0iJHdyXCIkcFwiOlwiJGRcIiwiOyBhbGw9IiRhbGwkZCIKICAgIGVsc2UKICAgICAgc3RhdHVzPWZhaWx1cmU7IGNvbGxlY3Rpb25fZXJyb3JzPSIkY29sbGVjdGlvbl9lcnJvcnNcIiRwXCIsIgogICAgZmkKICBkb25lCmZpCnJlcXVlc3RfanNvbj1udWxsCmlmIFsgLW4gIiRyZXF1ZXN0IiBdICYmIFsgIiRzdGF0dXMiID0gc3VjY2VzcyBdOyB0aGVuCiAgcmVxdWVzdF9qc29uPSJ7XCJraW5kXCI6XCIke3JlcXVlc3QlJToqfVwiLFwidGFyZ2V0XCI6XCIke3JlcXVlc3QjKjp9XCJ9IgpmaQpkaWdlc3Q9JChwcmludGYgJyVzJyAiJGFsbCIgfCBzaGEyNTZzdW0gfCBjdXQgLWMxLTE2KQplY2hvICJKMkdfUFJPQkUge1wib3BlcmF0aW9uX2lkXCI6XCIkb3BcIixcIm9wZXJhdGlvbl9pbnN0YW5jZV9pZFwiOlwiJGluc3RhbmNlXCIsXCJydW5faWRcIjpcIiR7SjJHX1JVTl9JRDotfVwiLFwic2NlbmFyaW9faWRcIjpcIiR7SjJHX1NDRU5BUklPX0lEOi19XCIsXCJzdGF0dXNcIjpcIiRzdGF0dXNcIixcImNsb2NrX3NvdXJjZVwiOlwiJGNsb2NrX3NvdXJjZVwiLFwiY2xvY2tfZG9tYWluXCI6XCIkY2xvY2tfZG9tYWluXCIsXCJzdGFydFwiOiRzdGFydCxcImVuZFwiOiQobm93KSxcInJlYWRzXCI6eyR7cmQlLH19LFwid3JpdGVzXCI6eyR7d3IlLH19LFwicmVhZF9vcmlnaW5zXCI6eyR7b3JpZ2lucyUsfX0sXCJjb2xsZWN0aW9uX2Vycm9yc1wiOlske2NvbGxlY3Rpb25fZXJyb3JzJSx9XSxcInByb2R1Y2VyX2luc3RhbmNlX2lkXCI6XCIkcHJvZHVjZXJfaW5zdGFuY2VcIixcInByb2R1Y2VyX3J1bl9pZFwiOlwiJHByb2R1Y2VyX3J1blwiLFwiZXh0ZXJuYWxfcmVxdWVzdFwiOiRyZXF1ZXN0X2pzb24sXCJkaWdlc3RcIjpcIiRkaWdlc3RcIn0iClsgIiRzdGF0dXMiID0gc3VjY2VzcyBdCg==
+      run: mkdir -p /tmp/j2g && printf "%s" "$J2G_OP_B64" | base64 -d > /tmp/j2g/j2g_op
+        && chmod +x /tmp/j2g/j2g_op && echo /tmp/j2g >> "$GITHUB_PATH"
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Determine changed files
+      id: changes
+      shell: bash
+      run: "set -euo pipefail\nif [[ \"${{ github.event_name }}\" == \"pull_request\"\
+        \ ]]; then\n  base=\"${{ github.event.pull_request.base.sha }}\"\n  head=\"\
+        ${{ github.event.pull_request.head.sha }}\"\n  changed=$(git diff --name-only\
+        \ \"$base\" \"$head\" || true)\nelif [[ \"${{ github.event_name }}\" == \"\
+        push\" ]]; then\n  before=\"${{ github.event.before }}\"\n  after=\"${{ github.sha\
+        \ }}\"\n  if [[ \"$before\" =~ ^0+$ ]]; then\n    changed=$(git diff --name-only\
+        \ \"$after^\" \"$after\" || true)\n  else\n    changed=$(git diff --name-only\
+        \ \"$before\" \"$after\" || true)\n  fi\nelse\n  changed=$(git diff --name-only\
+        \ HEAD^ HEAD || true)\nfi\nif echo \"$changed\" | grep -q '^devour_feature_store/';\
+        \ then\n  echo \"deploy_changed=true\" >> \"$GITHUB_OUTPUT\"\nelse\n  echo\
+        \ \"deploy_changed=false\" >> \"$GITHUB_OUTPUT\"\nfi\n"
+    - name: Lint / Ruff
+      id: lint_ruff
+      if: ${{ github.event_name == 'pull_request' }}
+      env:
+        LINT_PATH: j2g-redacted
+        GITHUB_CONTEXT: j2g-redacted
+      run: j2g_op lint_ruff --writes lint-report.txt,ruff.sarif
+    - name: Lint / Ruff (post)
+      id: lint_ruff_post
+      if: ${{ always() && steps.lint_ruff.outcome != 'skipped' }}
+      env:
+        LINT_PATH: j2g-redacted
+        GITHUB_CONTEXT: j2g-redacted
+      run: j2g_op lint_ruff_post_always
+    - name: Format / Ruff
+      id: format_ruff
+      if: ${{ github.event_name == 'pull_request' }}
+      env:
+        FORMAT_PATH: j2g-redacted
+        GITHUB_CONTEXT: j2g-redacted
+      run: j2g_op format_ruff --writes ruff-format-report.txt
+    - name: Format / Ruff (post)
+      id: format_ruff_post
+      if: ${{ always() && steps.format_ruff.outcome != 'skipped' }}
+      env:
+        FORMAT_PATH: j2g-redacted
+        GITHUB_CONTEXT: j2g-redacted
+      run: j2g_op format_ruff_post_always
+    - name: Format / Ruff (Main Auto-fix)
+      id: format_ruff_main_auto_fix
+      if: ${{ github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name
+        == 'workflow_dispatch') }}
+      env:
+        FORMAT_PATH: j2g-redacted
+        GITHUB_CONTEXT: j2g-redacted
+      run: j2g_op format_ruff_main_auto_fix --writes ruff-autofix-summary.txt,ruff-format-autofix.diff
+    - name: Format / Ruff (Main Auto-fix) (post)
+      id: format_ruff_main_auto_fix_post
+      if: ${{ always() && steps.format_ruff_main_auto_fix.outcome != 'skipped' }}
+      env:
+        FORMAT_PATH: j2g-redacted
+        GITHUB_CONTEXT: j2g-redacted
+      run: j2g_op format_ruff_main_auto_fix_post_always
+    - name: Type Check / Pyright
+      id: type_check_pyright
+      if: ${{ github.event_name == 'pull_request' }}
+      env:
+        TYPECHECK_PATH: j2g-redacted
+        GITHUB_CONTEXT: j2g-redacted
+      run: j2g_op type_check_pyright --writes pyright-report.txt,pyright.json,pyright.sarif
+    - name: Type Check / Pyright (post)
+      id: type_check_pyright_post
+      if: ${{ always() && steps.type_check_pyright.outcome != 'skipped' }}
+      env:
+        TYPECHECK_PATH: j2g-redacted
+        GITHUB_CONTEXT: j2g-redacted
+      run: j2g_op type_check_pyright_post_always
+    - name: Unit Tests / PyTest
+      id: unit_tests_pytest
+      if: ${{ false }}
+      env:
+        TEST_PATH: j2g-redacted
+        GITHUB_CONTEXT: j2g-redacted
+      run: j2g_op unit_tests_pytest --writes pytest-report.txt,pytest.xml
+    - name: Unit Tests / PyTest (post)
+      id: unit_tests_pytest_post
+      if: ${{ always() && steps.unit_tests_pytest.outcome != 'skipped' }}
+      env:
+        TEST_PATH: j2g-redacted
+        GITHUB_CONTEXT: j2g-redacted
+      run: j2g_op unit_tests_pytest_post_always
+    - name: Quality - Other / pre-commit
+      id: quality_other_pre_commit
+      if: ${{ false }}
+      env:
+        GITHUB_CONTEXT: j2g-redacted
+      run: j2g_op quality_other_pre_commit --writes pre-commit-report.txt,pre-commit-pyright-snippet.txt
+    - name: Quality - Other / pre-commit (post)
+      id: quality_other_pre_commit_post
+      if: ${{ always() && steps.quality_other_pre_commit.outcome != 'skipped' }}
+      env:
+        GITHUB_CONTEXT: j2g-redacted
+      run: j2g_op quality_other_pre_commit_post_always
+    - name: PR CI Gate
+      run: j2g_op pr_ci_gate
+    - name: Docker Build & Push
+      id: docker_build_push
+      if: ${{ github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name
+        == 'workflow_dispatch') && steps.changes.outputs.deploy_changed == 'true'
+        }}
+      env:
+        BASE_IMAGE: j2g-redacted
+        DOCKERHUB_REPO: j2g-redacted
+      run: j2g_op docker_build_push --writes docker-build.txt
+    - name: Docker Build & Push (post)
+      id: docker_build_push_post
+      if: ${{ always() && steps.docker_build_push.outcome != 'skipped' }}
+      env:
+        BASE_IMAGE: j2g-redacted
+        DOCKERHUB_REPO: j2g-redacted
+      run: j2g_op docker_build_push_post_always
+    - name: Security Scan
+      id: security_scan
+      if: ${{ github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name
+        == 'workflow_dispatch') && steps.changes.outputs.deploy_changed == 'true'
+        }}
+      env:
+        GITHUB_CONTEXT: j2g-redacted
+      run: j2g_op security_scan --writes trivy.sarif,sbom.cdx.json,bandit.sarif,pip-audit.cdx.json
+    - name: Security Scan (post)
+      id: security_scan_post
+      if: ${{ always() && steps.security_scan.outcome != 'skipped' }}
+      env:
+        GITHUB_CONTEXT: j2g-redacted
+      run: j2g_op security_scan_post_always
+env:
+  J2G_RUN_ID: ShumzZzZz__devour__d57eb769-eval3-differential-llm-t0-8706605b0c12-diffonly-1
+  J2G_SCENARIO_ID: ShumzZzZz__devour__d57eb769-eval3-differential-llm-t0-8706605b0c12-diffonly-1
+  J2G_FAULTS: lint_ruff
+'on':
+  workflow_dispatch: null
